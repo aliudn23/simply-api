@@ -1,9 +1,12 @@
 import express, { json } from 'express';
-import cors from 'cors';
 import { MongoClient } from 'mongodb';
+import dotenv from 'dotenv';
+
+dotenv.config();
+
 const app = express();
 
-const mongoUri = 'mongodb+srv://aliudn_db_user:SkhhxQQJvqeyQWvc@cluster0.wrnxipj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'; // Change as needed
+const mongoUri = process.env.MONGO_URI; // Change as needed
 const client = new MongoClient(mongoUri, {
   serverApi: {
     version: '1',
@@ -37,6 +40,12 @@ app.get('/db-status', async (req, res) => {
         res.status(500).json({ success: false, message: 'MongoDB connection failed', error: error.message });
     }
 });
+
+app.use(cors({
+    origin: ['https://simply-tasks-my.netlify.app', 'http://simply-tasks.test:3000'], // Replace with your Vue app's origin
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+}));
 
 app.get('/', (req, res) => {
   res.send('Welcome to simply-api test!');
