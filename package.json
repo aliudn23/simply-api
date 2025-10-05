@@ -2,10 +2,9 @@
   "name": "simply-api",
   "version": "1.0.0",
   "description": "This API uses Bearer Token authentication for the initial login request. Clients must include an `Authorization` header with a static token when requesting login.",
-  "main": "index.js",
+  "main": "netlify/functions/api.js",
   "scripts": {
-    "start": "node index.js",
-    "build": "npm install",
+    "start": "node netlify/functions/api.js",
     "test": "jest"
   },
   "author": "Aliudin",
