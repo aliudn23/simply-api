@@ -4,6 +4,8 @@ This API uses Bearer Token authentication for the initial login request. Clients
 
 **Example:**
 
+URL of API is https://simply-api.onrender.com try to open the url if frontend is not connected to api since its free version.
+
 Include this hvptSQkJcYA_rj5uKbKZ44w1L9BPBi_4 in your login request to authenticate.
 
 ## Data Storage
