@@ -33,7 +33,7 @@ app.get('/db-status', async (req, res) => {
 });
 
 app.use(cors({
-    origin: 'http://simply-task.test:3000', // Replace with your Vue app's origin
+    origin: 'https://simply-tasks-my.netlify.app', // Replace with your Vue app's origin
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
 }));
@@ -42,7 +42,6 @@ app.get('/', (req, res) => {
   res.send('Welcome to simply-api test!');
 });
 
-// Generate a random bearer token at server start
 const serverBearerToken = "hvptSQkJcYA_rj5uKbKZ44w1L9BPBi_4"; // 32 chars, URL-safe
 
 // Middleware to check for Bearer token before /login
@@ -291,6 +290,6 @@ app.delete('/tasks/:id', async (req, res) => {
     }
 });
 
-app.listen(3001, "simply-api.test", () => {
-  console.log("Listening for request");
+app.listen(80, "https://simplyapi.netlify.app", () => {
+  console.log("Listening for requests");
 });

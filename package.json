@@ -1,10 +1,12 @@
 {
   "name": "simply-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "This API uses Bearer Token authentication for the initial login request. Clients must include an `Authorization` header with a static token when requesting login.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "build": "npm install",
+    "test": "jest"
   },
   "author": "Aliudin",
   "license": "ISC",
@@ -13,5 +15,15 @@
     "express": "^5.1.0",
     "mongoose": "^8.18.3",
     "serverless-http": "^4.0.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aliudn23/simply-api.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/aliudn23/simply-api/issues"
+  },
+  "homepage": "https://github.com/aliudn23/simply-api#readme"
 }
