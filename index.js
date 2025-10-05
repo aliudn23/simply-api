@@ -290,6 +290,6 @@ app.delete('/tasks/:id', async (req, res) => {
     }
 });
 
-app.listen(80, "https://simplyapi.netlify.app", () => {
-  console.log("Listening for requests");
+app.listen(3001, "simply-api.test", () => {
+    console.log('Server is running on http://simply-api.test:3001');
 });
