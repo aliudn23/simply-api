@@ -290,6 +290,6 @@ app.delete('/tasks/:id', async (req, res) => {
     }
 });
 
-app.listen(3001, "simply-api.test", () => {
-    console.log('Server is running on http://simply-api.test:3001');
+app.listen(8080, "https://simply-api.onrender.com", () => {
+    console.log('Server is running on https://simply-api.onrender.com');
 });
