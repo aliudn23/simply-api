@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "This API uses Bearer Token authentication for the initial login request. Clients must include an `Authorization` header with a static token when requesting login.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "node index.js",
     "test": "jest"
