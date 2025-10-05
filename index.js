@@ -1,4 +1,5 @@
 import express, { json } from 'express';
+import cors from 'cors';
 import { MongoClient } from 'mongodb';
 import dotenv from 'dotenv';
 
